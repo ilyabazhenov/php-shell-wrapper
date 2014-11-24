@@ -18,7 +18,7 @@ abstract class Value
         if ($this->value === null) {
             return sprintf('%s%s', static::PREFIX, $this->name);
         }
-        return sprintf('%s%s %s', static::PREFIX, $this->name, escapeshellarg($this->value));
+        return sprintf('%s%s=%s', static::PREFIX, $this->name, escapeshellarg($this->value));
     }
 
     public function getName()
